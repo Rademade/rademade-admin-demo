@@ -1,0 +1,1445 @@
+Overwriting existing field status in class Post.
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-05 15:41:27 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered vendor/bundle/gems/railties-4.1.12/lib/rails/templates/rails/welcome/index.html.erb (1.2ms)
+Completed 200 OK in 19ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2015-08-05 15:41:30 +0300
+
+ActionController::RoutingError (No route matches [GET] "/admin"):
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/gems/railties-4.1.12/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/gems/railties-4.1.12/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/gems/railties-4.1.12/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/methodoverride.rb:21:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/runtime.rb:17:in `call'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/static.rb:84:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/sendfile.rb:112:in `call'
+  vendor/bundle/gems/light_resizer-0.1.7/lib/light_resizer/middleware.rb:22:in `call'
+  vendor/bundle/gems/railties-4.1.12/lib/rails/engine.rb:514:in `call'
+  vendor/bundle/gems/railties-4.1.12/lib/rails/application.rb:144:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/content_length.rb:14:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/handler/webrick.rb:60:in `service'
+  /home/sergey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/sergey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/sergey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/templates/routes/_route.html.erb (47.4ms)
+  Rendered vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.3ms)
+  Rendered vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (97.4ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2015-08-05 15:41:30 +0300
+
+ActionController::RoutingError (No route matches [GET] "/admin"):
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/gems/railties-4.1.12/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/gems/railties-4.1.12/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/gems/railties-4.1.12/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/methodoverride.rb:21:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/runtime.rb:17:in `call'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/static.rb:84:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/sendfile.rb:112:in `call'
+  vendor/bundle/gems/light_resizer-0.1.7/lib/light_resizer/middleware.rb:22:in `call'
+  vendor/bundle/gems/railties-4.1.12/lib/rails/engine.rb:514:in `call'
+  vendor/bundle/gems/railties-4.1.12/lib/rails/application.rb:144:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/content_length.rb:14:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/handler/webrick.rb:60:in `service'
+  /home/sergey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/sergey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/sergey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.0ms)
+  Rendered vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.3ms)
+  Rendered vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (47.4ms)
+Overwriting existing field status in class Post.
+Overwriting existing field status in class Post.
+Overwriting existing field status in class Post.
+Overwriting existing field status in class Post.
+
+
+Started GET "/admin/" for 127.0.0.1 at 2015-08-05 15:42:51 +0300
+
+ActionController::RoutingError (No route matches [GET] "/admin"):
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/gems/railties-4.1.12/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/gems/railties-4.1.12/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/gems/railties-4.1.12/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/methodoverride.rb:21:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/runtime.rb:17:in `call'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/static.rb:84:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/sendfile.rb:112:in `call'
+  vendor/bundle/gems/light_resizer-0.1.7/lib/light_resizer/middleware.rb:22:in `call'
+  vendor/bundle/gems/railties-4.1.12/lib/rails/engine.rb:514:in `call'
+  vendor/bundle/gems/railties-4.1.12/lib/rails/application.rb:144:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/content_length.rb:14:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/handler/webrick.rb:60:in `service'
+  /home/sergey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/sergey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/sergey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.6ms)
+  Rendered vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.3ms)
+  Rendered vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (55.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-05 15:42:54 +0300
+Processing by RademadeAdmin::DashboardController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 2.0775ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=users selector={"_id"=>BSON::ObjectId('559b7cfa72616410af000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4667ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=users selector={"_id"=>BSON::ObjectId('559b7cfa72616410af000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2029ms
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/dashboard/index.html.erb within layouts/rademade_admin (10.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/parts/_head.html.erb (155.5ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/main.html.erb (156.7ms)
+Completed 500 Internal Server Error in 225ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (couldn't find file 'jquery/dist/jquery' with type 'application/javascript'):
+    1: <title>Rademade Admin</title>
+    2: <meta charset="utf-8">
+    3: <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    4: <%= javascript_include_tag(:rademade_admin, 'data-turbolinks-track' => true) %>
+    5: <%= yield(:head) if content_for?(:head) %>
+    6: <%= stylesheet_link_tag(:rademade_admin, :media => 'all', 'data-turbolinks-track' => true) %>
+    7: <%= csrf_meta_tags %>
+  vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/assets/javascripts/rademade_admin.coffee:3
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/resolve.rb:64:in `resolve!'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/directive_processor.rb:399:in `resolve'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/directive_processor.rb:207:in `process_require_directive'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/directive_processor.rb:180:in `block in process_directives'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/directive_processor.rb:178:in `each'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/directive_processor.rb:178:in `process_directives'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/directive_processor.rb:83:in `_call'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/directive_processor.rb:68:in `call'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/processor_utils.rb:75:in `call_processor'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/processor_utils.rb:57:in `block in call_processors'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/processor_utils.rb:56:in `reverse_each'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/processor_utils.rb:56:in `call_processors'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/loader.rb:86:in `load_asset_by_uri'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/loader.rb:45:in `block in load'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/loader.rb:155:in `fetch_asset_from_dependency_cache'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/loader.rb:38:in `load'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/cached_environment.rb:20:in `block in initialize'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/cached_environment.rb:47:in `yield'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/cached_environment.rb:47:in `load'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/bundle.rb:23:in `block in call'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/utils.rb:183:in `dfs'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/bundle.rb:24:in `call'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/processor_utils.rb:75:in `call_processor'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/processor_utils.rb:57:in `block in call_processors'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/processor_utils.rb:56:in `reverse_each'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/processor_utils.rb:56:in `call_processors'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/loader.rb:86:in `load_asset_by_uri'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/loader.rb:45:in `block in load'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/loader.rb:155:in `fetch_asset_from_dependency_cache'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/loader.rb:38:in `load'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/cached_environment.rb:20:in `block in initialize'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/cached_environment.rb:47:in `yield'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/cached_environment.rb:47:in `load'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/base.rb:63:in `find_asset'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/environment.rb:30:in `find_asset'
+  vendor/bundle/gems/sprockets-3.2.0/lib/sprockets/base.rb:89:in `[]'
+  vendor/bundle/gems/sprockets-rails-2.3.2/lib/sprockets/rails/helper.rb:230:in `lookup_asset_for_path'
+  vendor/bundle/gems/sprockets-rails-2.3.2/lib/sprockets/rails/helper.rb:138:in `block in javascript_include_tag'
+  vendor/bundle/gems/sprockets-rails-2.3.2/lib/sprockets/rails/helper.rb:136:in `map'
+  vendor/bundle/gems/sprockets-rails-2.3.2/lib/sprockets/rails/helper.rb:136:in `javascript_include_tag'
+  vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/parts/_head.html.erb:4:in `_vendor_bundle_bundler_gems_rademade_admin___a__e___aae_app_views_rademade_admin__layouts_parts__head_html_erb__1027421953_86657260'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/template.rb:145:in `block in render'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/notifications.rb:161:in `instrument'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/template.rb:339:in `instrument'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/template.rb:143:in `render'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/renderer/partial_renderer.rb:306:in `render_partial'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/renderer/partial_renderer.rb:279:in `block in render'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/notifications.rb:159:in `block in instrument'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/notifications.rb:159:in `instrument'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/renderer/partial_renderer.rb:278:in `render'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/renderer/renderer.rb:47:in `render_partial'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/helpers/rendering_helper.rb:35:in `render'
+  vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/main.html.erb:3:in `_vendor_bundle_bundler_gems_rademade_admin___a__e___aae_app_views_rademade_admin__layouts_main_html_erb___216222027_86604230'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/template.rb:145:in `block in render'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/notifications.rb:161:in `instrument'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/template.rb:339:in `instrument'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/template.rb:143:in `render'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/renderer/template_renderer.rb:55:in `block (2 levels) in render_template'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/notifications.rb:159:in `block in instrument'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/notifications.rb:159:in `instrument'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/renderer/template_renderer.rb:54:in `block in render_template'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/renderer/template_renderer.rb:62:in `render_with_layout'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/renderer/template_renderer.rb:53:in `render_template'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/renderer/template_renderer.rb:17:in `render'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/renderer/renderer.rb:42:in `render_template'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/renderer/renderer.rb:23:in `render'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/helpers/rendering_helper.rb:32:in `render'
+  vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/layouts/rademade_admin.html.erb:1:in `_vendor_bundle_bundler_gems_rademade_admin___a__e___aae_app_views_layouts_rademade_admin_html_erb__473745130_80705760'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/template.rb:145:in `block in render'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/notifications.rb:161:in `instrument'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/template.rb:339:in `instrument'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/template.rb:143:in `render'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/renderer/template_renderer.rb:67:in `render_with_layout'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/renderer/template_renderer.rb:53:in `render_template'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/renderer/template_renderer.rb:17:in `render'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/renderer/renderer.rb:42:in `render_template'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/renderer/renderer.rb:23:in `render'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/rendering.rb:99:in `_render_template'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/rendering.rb:82:in `render_to_body'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  vendor/bundle/gems/actionpack-4.1.12/lib/abstract_controller/rendering.rb:25:in `render'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_controller/metal/rendering.rb:16:in `render'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/sergey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  vendor/bundle/gems/activerecord-4.1.12/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_controller/metal/instrumentation.rb:43:in `render'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  vendor/bundle/gems/actionpack-4.1.12/lib/abstract_controller/base.rb:189:in `process_action'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  vendor/bundle/gems/actionpack-4.1.12/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/callbacks.rb:113:in `call'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/callbacks.rb:113:in `call'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/callbacks.rb:552:in `block (2 levels) in compile'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/callbacks.rb:502:in `call'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/callbacks.rb:502:in `call'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/callbacks.rb:86:in `run_callbacks'
+  vendor/bundle/gems/actionpack-4.1.12/lib/abstract_controller/callbacks.rb:19:in `process_action'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/notifications.rb:159:in `block in instrument'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/notifications.rb:159:in `instrument'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  vendor/bundle/gems/activerecord-4.1.12/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  vendor/bundle/gems/actionpack-4.1.12/lib/abstract_controller/base.rb:136:in `process'
+  vendor/bundle/gems/actionview-4.1.12/lib/action_view/rendering.rb:30:in `process'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_controller/metal.rb:196:in `dispatch'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_controller/metal.rb:232:in `block in action'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/routing/route_set.rb:82:in `call'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/routing/route_set.rb:50:in `call'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/journey/router.rb:73:in `block in call'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/journey/router.rb:59:in `each'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/journey/router.rb:59:in `call'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/routing/route_set.rb:692:in `call'
+  vendor/bundle/gems/railties-4.1.12/lib/rails/engine.rb:514:in `call'
+  vendor/bundle/gems/railties-4.1.12/lib/rails/railtie.rb:194:in `public_send'
+  vendor/bundle/gems/railties-4.1.12/lib/rails/railtie.rb:194:in `method_missing'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/journey/router.rb:73:in `block in call'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/journey/router.rb:59:in `each'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/journey/router.rb:59:in `call'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/routing/route_set.rb:692:in `call'
+  vendor/bundle/gems/i18n-js-2.1.2/lib/i18n-js/middleware.rb:11:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/etag.rb:23:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/conditionalget.rb:25:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/head.rb:11:in `call'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/flash.rb:254:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/session/abstract/id.rb:225:in `context'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/session/abstract/id.rb:220:in `call'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/cookies.rb:562:in `call'
+  vendor/bundle/gems/activerecord-4.1.12/lib/active_record/query_cache.rb:36:in `call'
+  vendor/bundle/gems/activerecord-4.1.12/lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/callbacks.rb:82:in `run_callbacks'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/gems/railties-4.1.12/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/gems/railties-4.1.12/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/gems/railties-4.1.12/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/methodoverride.rb:21:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/runtime.rb:17:in `call'
+  vendor/bundle/gems/activesupport-4.1.12/lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/static.rb:84:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/sendfile.rb:112:in `call'
+  vendor/bundle/gems/light_resizer-0.1.7/lib/light_resizer/middleware.rb:22:in `call'
+  vendor/bundle/gems/railties-4.1.12/lib/rails/engine.rb:514:in `call'
+  vendor/bundle/gems/railties-4.1.12/lib/rails/application.rb:144:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/content_length.rb:14:in `call'
+  vendor/bundle/gems/rack-1.5.5/lib/rack/handler/webrick.rb:60:in `service'
+  /home/sergey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/sergey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/sergey/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered vendor/bundle/gems/actionpack-4.1.12/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (7.8ms)
+Overwriting existing field status in class Post.
+Overwriting existing field status in class Post.
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-05 15:43:26 +0300
+Processing by RademadeAdmin::DashboardController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5323ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=users selector={"_id"=>BSON::ObjectId('559b7cfa72616410af000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2088ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=users selector={"_id"=>BSON::ObjectId('559b7cfa72616410af000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1897ms
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/dashboard/index.html.erb within layouts/rademade_admin (42.8ms)
+WARNING on line 33 of /var/www/Gems/rademade_admin_demo/vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/assets/stylesheets/rademade_admin/blocks/nav/_main.sass:
+This selector doesn't have any properties and will not be rendered.
+
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/parts/_head.html.erb (12673.5ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.5ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.1ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/sub_items.html.erb (5.8ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (10.9ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.1ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_menu.html.erb (64.7ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/main.html.erb (12741.7ms)
+Completed 200 OK in 12807ms (Views: 12787.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/i18n.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:39 +0300
+
+
+Started GET "/assets/i18n/translations.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:39 +0300
+
+
+Started GET "/assets/bower_components/jquery/dist/jquery.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:39 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/ui/core.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:39 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/ui/widget.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:39 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/ui/mouse.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:39 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/ui/draggable.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:39 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/ui/resizable.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:39 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/ui/sortable.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:39 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/ui/slider.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:39 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/ui/datepicker.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:39 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/ui/tabs.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:39 +0300
+
+
+Started GET "/assets/bower_components/jcrop/js/jquery.Jcrop.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:39 +0300
+
+
+Started GET "/assets/bower_components/jquery-timepicker/dist/jquery-ui-timepicker-addon.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:39 +0300
+
+
+Started GET "/assets/bower_components/jquery-fileupload/js/jquery.fileupload.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:39 +0300
+
+
+Started GET "/assets/bower_components/jquery-timepicker/dist/jquery-ui-sliderAccess.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:39 +0300
+
+
+Started GET "/assets/bower_components/jquery-fileupload/js/jquery.iframe-transport.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:39 +0300
+
+
+Started GET "/assets/bower_components/jquery-form/jquery.form.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:39 +0300
+
+
+Started GET "/assets/bower_components/jquery-serialize/jquery.serialize-object.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:39 +0300
+
+
+Started GET "/assets/bower_components/jquery-formrestrict/jquery.formrestrict.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:39 +0300
+
+
+Started GET "/assets/bower_components/jquery-validation/src/core.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/bower_components/jquery-validation/src/ajax.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/bower_components/jquery-validation/src/delegate.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/bower_components/TableDnD/js/jquery.tablednd.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/bower_components/leaflet/dist/leaflet-src.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/bower_components/moment/moment.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/select2.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/ckeditor/init.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/ckeditor/ckeditor.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/bower_components/flot/jquery.flot.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/bower_components/flot/jquery.flot.resize.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/bower_components/flot/jquery.flot.stack.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/bower_components/knob/js/jquery.knob.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/bower_components/uniform/jquery.uniform.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/bower_components/data-tables/media/js/jquery.dataTables.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/bower_components/wysihtml5/dist/wysihtml5-0.3.0.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/bower_components/underscore/underscore.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/bower_components/backbone/backbone.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/settings/ajax-csrf.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/library/notifier.custom.min.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/library/ckeditor/config.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/form/form-ajax.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/form/form-initializer.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/form/form-validation.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/form/form.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/app.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/image/model.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/common/cropper.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/common/datetime-picker.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/common/dnd-sort.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/common/image-preview.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/common/lang-panel.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/common/location.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/common/menu-toggler.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/common/related-index.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/common/status-toggler.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/common/turboform.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/bower_components/jquery-fileupload/css/jquery.fileupload-ui.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/bower_components/magnific-popup/dist/magnific-popup.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/themes/base/core.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/themes/base/slider.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/themes/base/datepicker.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/bower_components/uniform/themes/default/css/uniform.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/bower_components/jquery-timepicker/dist/jquery-ui-timepicker-addon.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/bower_components/jcrop/css/jquery.Jcrop.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/bower_components/leaflet/dist/leaflet.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/select2.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/common/uploader.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/common/url-visitor.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/content/view.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/forms/insert.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/forms/login.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/forms/remove.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/gallery/image/collection-view.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/gallery/image/collection.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/gallery/image/model.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/gallery/image/view.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/gallery/popup.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/gallery/view.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/image/preview.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/notifier/initialize.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/select2/model.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/select2/related/collection-view.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/select2/related/collection.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/select2/related/model.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/select2/related/view.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/select2/view.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/templates/select2-add.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/templates/gallery-popup.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/templates/related-item.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/bower_components/flot/jquery.flot.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/bower_components/wysihtml5/dist/wysihtml5-0.3.0.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/bower_components/underscore/underscore.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/bower_components/backbone/backbone.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/gallery/image/model.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/gallery/popup.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/notifier/initialize.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:40 +0300
+
+
+Started GET "/assets/rademade_admin/app/select2/related/collection.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:41 +0300
+
+
+Started GET "/assets/rademade_admin/app/select2/view.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:43:41 +0300
+
+
+Started GET "/assets/bower_components/magnific-popup/dist/magnific-popup.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:43:41 +0300
+
+
+Started GET "/assets/select2.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:43:41 +0300
+
+
+Started GET "/assets/bower_components/leaflet/dist/leaflet.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:43:41 +0300
+
+
+Started GET "/assets/rademade_admin.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:43:41 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/themes/base/datepicker.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:43:41 +0300
+
+
+Started GET "/assets/bower_components/uniform/themes/default/css/uniform.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:43:41 +0300
+
+
+Started GET "/assets/rademade_admin/sprite.svg" for 127.0.0.1 at 2015-08-05 15:43:41 +0300
+
+
+Started GET "/users" for 127.0.0.1 at 2015-08-05 15:43:43 +0300
+Processing by RademadeAdmin::UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3549ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=users selector={"_id"=>BSON::ObjectId('559b7cfa72616410af000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1802ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=users selector={"_id"=>BSON::ObjectId('559b7cfa72616410af000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1435ms
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_search.html.erb (0.6ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/table/_head.html.erb (1.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=users selector={"$query"=>{}, "$orderby"=>{"_id"=>-1}} flags=[] limit=20 skip=0 batch_size=nil fields=nil runtime: 0.4581ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=users selector={"$query"=>{}, "$orderby"=>{"_id"=>-1}} flags=[] limit=20 skip=0 batch_size=nil fields=nil runtime: 0.2316ms
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.7ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (2.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.3ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (1.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.3ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (1.8ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (1.7ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/table/_list.html.erb (29.0ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=rademade_admin_dev command={:count=>"users", :query=>{}} runtime: 0.3004ms
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_pagination.html.erb (2.1ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_on_page_switcher.html.erb (0.9ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/content_item.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_list.html.erb (39.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/abstract/index.html.erb within layouts/rademade_admin (40.3ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/parts/_head.html.erb (205.5ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/sub_items.html.erb (4.6ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (9.3ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `articles`
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.1ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_menu.html.erb (48.5ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/main.html.erb (255.3ms)
+Completed 200 OK in 312ms (Views: 297.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-08-05 15:43:45 +0300
+Processing by RademadeAdmin::PostsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=users selector={"_id"=>BSON::ObjectId('559b7cfa72616410af000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2998ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=users selector={"_id"=>BSON::ObjectId('559b7cfa72616410af000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1477ms
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_search.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/table/_head.html.erb (0.3ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=posts selector={"$query"=>{}, "$orderby"=>{"position"=>1, "_id"=>-1}} flags=[] limit=20 skip=0 batch_size=nil fields=nil runtime: 2.7386ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=posts selector={"$query"=>{}, "$orderby"=>{"position"=>1, "_id"=>-1}} flags=[] limit=20 skip=0 batch_size=nil fields=nil runtime: 0.3049ms
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.3ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (2.5ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.5ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (0.3ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (0.3ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.3ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/table/_list.html.erb (16.0ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=rademade_admin_dev command={:count=>"posts", :query=>{}} runtime: 0.2697ms
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_pagination.html.erb (1.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_on_page_switcher.html.erb (0.5ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/content_item.html.erb (0.1ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_list.html.erb (22.1ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/abstract/index.html.erb within layouts/rademade_admin (22.7ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/parts/_head.html.erb (148.3ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/sub_items.html.erb (5.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (9.7ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.1ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_menu.html.erb (49.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/main.html.erb (198.8ms)
+Completed 200 OK in 238ms (Views: 223.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tags" for 127.0.0.1 at 2015-08-05 15:43:46 +0300
+Processing by RademadeAdmin::TagsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=users selector={"_id"=>BSON::ObjectId('559b7cfa72616410af000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2876ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=users selector={"_id"=>BSON::ObjectId('559b7cfa72616410af000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1684ms
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_search.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/table/_head.html.erb (0.3ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=tags selector={"$query"=>{}, "$orderby"=>{"_id"=>-1}} flags=[] limit=20 skip=0 batch_size=nil fields=nil runtime: 3.5285ms
+  MOPED: 127.0.0.1:27017 KILL_CURSORS cursor_ids=[455825958272914114] runtime: 0.0923ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=tags selector={"$query"=>{}, "$orderby"=>{"_id"=>-1}} flags=[] limit=20 skip=0 batch_size=nil fields=nil runtime: 0.4247ms
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.3ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (1.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.5ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (0.9ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (1.1ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.6ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (0.9ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (0.9ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (0.9ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (0.8ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (0.9ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (0.8ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (0.9ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (0.9ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (0.9ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (0.8ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (0.8ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (0.9ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (0.9ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (0.8ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (0.8ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (0.9ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (0.8ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  MOPED: 127.0.0.1:27017 KILL_CURSORS cursor_ids=[455825958237345708] runtime: 0.1289ms
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/table/_list.html.erb (139.6ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=rademade_admin_dev command={:count=>"tags", :query=>{}} runtime: 0.2581ms
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_pagination.html.erb (7.7ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_on_page_switcher.html.erb (0.5ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/content_item.html.erb (0.1ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_list.html.erb (152.1ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/abstract/index.html.erb within layouts/rademade_admin (152.7ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/parts/_head.html.erb (145.5ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/sub_items.html.erb (4.7ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (9.3ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `articles`
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.1ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_menu.html.erb (48.9ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/main.html.erb (195.6ms)
+Completed 200 OK in 362ms (Views: 350.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2015-08-05 15:43:48 +0300
+Processing by RademadeAdmin::AuthorsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=users selector={"_id"=>BSON::ObjectId('559b7cfa72616410af000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2822ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=users selector={"_id"=>BSON::ObjectId('559b7cfa72616410af000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1486ms
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_search.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/table/_head.html.erb (0.4ms)
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  `authors`.* FROM `authors`   ORDER BY `authors`.`id` DESC LIMIT 20 OFFSET 0[0m
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.3ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (1.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.5ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.3ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (1.3ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.5ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.3ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (1.3ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.6ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/table/_list.html.erb (23.5ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `authors`
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_pagination.html.erb (2.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_on_page_switcher.html.erb (0.6ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/content_item.html.erb (0.1ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_list.html.erb (30.6ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/abstract/index.html.erb within layouts/rademade_admin (31.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/parts/_head.html.erb (205.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/sub_items.html.erb (4.6ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (9.1ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.1ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_menu.html.erb (48.7ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/main.html.erb (255.6ms)
+Completed 200 OK in 306ms (Views: 288.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-08-05 15:43:49 +0300
+Processing by RademadeAdmin::ArticlesController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=users selector={"_id"=>BSON::ObjectId('559b7cfa72616410af000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3674ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=users selector={"_id"=>BSON::ObjectId('559b7cfa72616410af000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1993ms
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_search.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/table/_head.html.erb (0.3ms)
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  `articles`.* FROM `articles`   ORDER BY `articles`.`id` DESC LIMIT 20 OFFSET 0
+  [1m[36mArticle::Translation Load (0.1ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations`  WHERE `article_translations`.`article_id` = 3[0m
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  `authors`.* FROM `authors`  WHERE `authors`.`id` = 7 LIMIT 1
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.3ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (1.8ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.5ms)
+  [1m[36mArticle::Translation Load (0.2ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations`  WHERE `article_translations`.`article_id` = 2[0m
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  [1m[35mArticle::Translation Load (0.2ms)[0m  SELECT `article_translations`.* FROM `article_translations`  WHERE `article_translations`.`article_id` = 1
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  `authors`.* FROM `authors`  WHERE `authors`.`id` = 1 LIMIT 1[0m
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.3ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/table/_list.html.erb (33.4ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `articles`
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_pagination.html.erb (1.9ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_on_page_switcher.html.erb (0.6ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/content_item.html.erb (0.1ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_list.html.erb (39.9ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/abstract/index.html.erb within layouts/rademade_admin (40.5ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/parts/_head.html.erb (208.6ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.1ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/sub_items.html.erb (4.9ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (9.8ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.1ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_menu.html.erb (51.1ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/main.html.erb (261.1ms)
+Completed 200 OK in 317ms (Views: 301.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/rubrics" for 127.0.0.1 at 2015-08-05 15:43:49 +0300
+Processing by RademadeAdmin::RubricsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=users selector={"_id"=>BSON::ObjectId('559b7cfa72616410af000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2838ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=users selector={"_id"=>BSON::ObjectId('559b7cfa72616410af000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1364ms
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_search.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/table/_head.html.erb (0.2ms)
+  [1m[35mRubric Load (0.2ms)[0m  SELECT  `rubrics`.* FROM `rubrics`   ORDER BY `rubrics`.`id` DESC LIMIT 20 OFFSET 0
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (1.5ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.5ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (1.3ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (1.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (1.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (1.3ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (1.3ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_edit.html.erb (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_hide.html.erb (1.3ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_preview.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/button/_destroy.html.erb (0.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/table/_list.html.erb (32.1ms)
+  [1m[36m (2.0ms)[0m  [1mSELECT COUNT(*) FROM `rubrics`[0m
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_pagination.html.erb (3.9ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_on_page_switcher.html.erb (0.6ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/content_item.html.erb (0.1ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_list.html.erb (40.9ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/abstract/index.html.erb within layouts/rademade_admin (41.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/parts/_head.html.erb (146.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/sub_items.html.erb (4.7ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (9.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `articles`
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.1ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_menu.html.erb (48.8ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/main.html.erb (196.0ms)
+Completed 200 OK in 254ms (Views: 237.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/sessions/logout" for 127.0.0.1 at 2015-08-05 15:43:55 +0300
+Processing by RademadeAdmin::SessionsController#logout as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=users selector={"_id"=>BSON::ObjectId('559b7cfa72616410af000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3085ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=users selector={"_id"=>BSON::ObjectId('559b7cfa72616410af000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1600ms
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-08-05 15:43:55 +0300
+Processing by RademadeAdmin::DashboardController#login as HTML
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/dashboard/login.html.erb within layouts/login (7.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/parts/_head.html.erb (149.6ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/login.html.erb (150.7ms)
+Completed 200 OK in 161ms (Views: 160.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/rademade_admin/ico/user.svg" for 127.0.0.1 at 2015-08-05 15:43:56 +0300
+
+
+Started GET "/assets/rademade_admin/ico/password.svg" for 127.0.0.1 at 2015-08-05 15:43:56 +0300
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-08-05 15:43:57 +0300
+Processing by RademadeAdmin::SessionsController#login as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/8kcHcWxD/QABGTIxQgRmuqU4ND6X5P7OZCBMJgt6fo=", "data"=>{"email"=>"mrtom@rademade.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=users selector={"$query"=>{"email"=>"mrtom@rademade.com"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 3.5406ms
+Completed 412 Precondition Failed in 5ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/rademade_admin/ico/user_red.svg" for 127.0.0.1 at 2015-08-05 15:43:57 +0300
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-08-05 15:44:00 +0300
+Processing by RademadeAdmin::SessionsController#login as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/8kcHcWxD/QABGTIxQgRmuqU4ND6X5P7OZCBMJgt6fo=", "data"=>{"email"=>"praffesor@ukr.net", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=users selector={"$query"=>{"email"=>"praffesor@ukr.net"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3673ms
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-08-05 15:44:00 +0300
+Processing by RademadeAdmin::DashboardController#login as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=users selector={"_id"=>BSON::ObjectId('559b7cfa72616410af000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4428ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=users selector={"_id"=>BSON::ObjectId('559b7cfa72616410af000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4981ms
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-05 15:44:00 +0300
+Processing by RademadeAdmin::DashboardController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3225ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=users selector={"_id"=>BSON::ObjectId('559b7cfa72616410af000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2209ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rademade_admin_dev collection=users selector={"_id"=>BSON::ObjectId('559b7cfa72616410af000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1634ms
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/dashboard/index.html.erb within layouts/rademade_admin (0.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/parts/_head.html.erb (210.2ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.1ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/sub_items.html.erb (4.7ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (9.4ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.1ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/cells/menu/item.html.erb (0.0ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_blocks/_menu.html.erb (49.5ms)
+  Rendered vendor/bundle/bundler/gems/rademade_admin-91a24e474aae/app/views/rademade_admin/_layouts/main.html.erb (261.1ms)
+Completed 200 OK in 266ms (Views: 263.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/i18n.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:00 +0300
+
+
+Started GET "/assets/i18n/translations.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:00 +0300
+
+
+Started GET "/assets/bower_components/jquery/dist/jquery.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:00 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/ui/mouse.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:00 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/ui/widget.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/ui/core.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/ui/draggable.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/jquery-fileupload/css/jquery.fileupload-ui.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/magnific-popup/dist/magnific-popup.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/themes/base/core.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/themes/base/slider.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/themes/base/datepicker.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/uniform/themes/default/css/uniform.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/jquery-timepicker/dist/jquery-ui-timepicker-addon.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/jcrop/css/jquery.Jcrop.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/leaflet/dist/leaflet.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/select2.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/ui/resizable.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/ui/sortable.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/ui/slider.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/ui/tabs.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/ui/datepicker.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/jcrop/js/jquery.Jcrop.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/jquery-timepicker/dist/jquery-ui-timepicker-addon.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/jquery-timepicker/dist/jquery-ui-sliderAccess.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/jquery-fileupload/js/jquery.fileupload.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/jquery-fileupload/js/jquery.iframe-transport.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/jquery-form/jquery.form.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/jquery-serialize/jquery.serialize-object.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/jquery-formrestrict/jquery.formrestrict.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/jquery-validation/src/core.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/jquery-validation/src/ajax.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/jquery-validation/src/delegate.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/TableDnD/js/jquery.tablednd.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/leaflet/dist/leaflet-src.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/moment/moment.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/select2.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/ckeditor/init.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/ckeditor/ckeditor.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/flot/jquery.flot.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/flot/jquery.flot.resize.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/flot/jquery.flot.stack.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/knob/js/jquery.knob.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/uniform/jquery.uniform.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/data-tables/media/js/jquery.dataTables.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/wysihtml5/dist/wysihtml5-0.3.0.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/underscore/underscore.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/backbone/backbone.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/library/ckeditor/config.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/library/notifier.custom.min.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/settings/ajax-csrf.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/form/form-ajax.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/form/form-initializer.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/form/form-validation.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/form/form.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/image/model.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/app.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/common/cropper.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/common/datetime-picker.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/common/dnd-sort.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/common/image-preview.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/common/lang-panel.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/common/location.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/common/menu-toggler.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/common/related-index.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/common/status-toggler.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/common/turboform.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/common/uploader.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/common/url-visitor.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/content/view.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/forms/insert.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/forms/login.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/forms/remove.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/gallery/image/collection-view.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/gallery/image/collection.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/gallery/image/model.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/gallery/image/view.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/gallery/popup.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/gallery/view.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/image/preview.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/notifier/initialize.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/select2/model.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/select2/related/collection-view.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/select2/related/collection.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/select2/related/model.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/select2/related/view.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/select2/view.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/templates/gallery-popup.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/templates/related-item.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin/app/templates/select2-add.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/rademade_admin.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/ckeditor/ckeditor.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/flot/jquery.flot.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/data-tables/media/js/jquery.dataTables.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:01 +0300
+
+
+Started GET "/assets/bower_components/backbone/backbone.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:02 +0300
+
+
+Started GET "/assets/rademade_admin/app/gallery/image/model.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:02 +0300
+
+
+Started GET "/assets/rademade_admin/app/gallery/popup.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:02 +0300
+
+
+Started GET "/assets/rademade_admin/app/notifier/initialize.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:02 +0300
+
+
+Started GET "/assets/rademade_admin/app/select2/related/collection.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:02 +0300
+
+
+Started GET "/assets/rademade_admin/app/select2/view.self.js?body=1" for 127.0.0.1 at 2015-08-05 15:44:02 +0300
+
+
+Started GET "/assets/bower_components/magnific-popup/dist/magnific-popup.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:44:02 +0300
+
+
+Started GET "/assets/bower_components/jquery-fileupload/css/jquery.fileupload-ui.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:44:02 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/themes/base/datepicker.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:44:02 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/themes/base/slider.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:44:02 +0300
+
+
+Started GET "/assets/bower_components/jquery-ui/themes/base/core.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:44:02 +0300
+
+
+Started GET "/assets/bower_components/uniform/themes/default/css/uniform.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:44:02 +0300
+
+
+Started GET "/assets/bower_components/jquery-timepicker/dist/jquery-ui-timepicker-addon.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:44:02 +0300
+
+
+Started GET "/assets/bower_components/jcrop/css/jquery.Jcrop.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:44:02 +0300
+
+
+Started GET "/assets/bower_components/leaflet/dist/leaflet.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:44:02 +0300
+
+
+Started GET "/assets/select2.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:44:02 +0300
+
+
+Started GET "/assets/rademade_admin.self.css?body=1" for 127.0.0.1 at 2015-08-05 15:44:02 +0300
+
+
+Started GET "/assets/rademade_admin/sprite.svg" for 127.0.0.1 at 2015-08-05 15:44:02 +0300
