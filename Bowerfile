@@ -1,0 +1,3 @@
+assets_path 'assets/javascript'
+
+asset 'underscore'
