@@ -1443,3 +1443,100 @@ Started GET "/assets/rademade_admin.self.css?body=1" for 127.0.0.1 at 2015-08-05
 
 
 Started GET "/assets/rademade_admin/sprite.svg" for 127.0.0.1 at 2015-08-05 15:44:02 +0300
+Overwriting existing field status in class Post.
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Overwriting existing field status in class Post.
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Overwriting existing field status in class Post.
+  [1m[36m (4.6ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (35.0ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateArticles (20140814075700)
+  [1m[35m (2.7ms)[0m  CREATE TABLE `articles` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `author_id` int(11), `articles` int(11), `status` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (6.7ms)[0m  [1mCREATE  INDEX `index_articles_on_author_id`  ON `articles` (`author_id`) [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140814075700')[0m
+  [1m[35m (0.9ms)[0m  COMMIT
+Migrating to CreateAuthors (20140814075819)
+  [1m[36m (2.8ms)[0m  [1mCREATE TABLE `authors` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `photo` varchar(255), `verified` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140814075819')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to TranslateArticles (20140909175300)
+  [1m[36m (2.8ms)[0m  [1mCREATE TABLE `article_translations` (`id` int(11) auto_increment PRIMARY KEY, `article_id` int(11) NOT NULL, `locale` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (5.3ms)[0m  ALTER TABLE `article_translations` ADD `name` varchar(255)
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  `articles`.* FROM `articles`   ORDER BY `articles`.`id` ASC LIMIT 1000[0m
+  [1m[35m (7.6ms)[0m  CREATE  INDEX `index_article_translations_on_article_id`  ON `article_translations` (`article_id`) 
+  [1m[36m (6.9ms)[0m  [1mCREATE  INDEX `index_article_translations_on_locale`  ON `article_translations` (`locale`) [0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140909175300')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Migrating to RemoveNameFromArticles (20140909175800)
+  [1m[36m (3.9ms)[0m  [1mALTER TABLE `articles` DROP `name`[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140909175800')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+Migrating to TranslateAuthors (20140926142600)
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE `author_translations` (`id` int(11) auto_increment PRIMARY KEY, `author_id` int(11) NOT NULL, `locale` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (4.7ms)[0m  ALTER TABLE `author_translations` ADD `photo` varchar(255)
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  `authors`.* FROM `authors`   ORDER BY `authors`.`id` ASC LIMIT 1000[0m
+  [1m[35m (22.7ms)[0m  CREATE  INDEX `index_author_translations_on_author_id`  ON `author_translations` (`author_id`) 
+  [1m[36m (8.9ms)[0m  [1mCREATE  INDEX `index_author_translations_on_locale`  ON `author_translations` (`locale`) [0m
+  [1m[35m (3.9ms)[0m  ALTER TABLE `authors` DROP `photo`
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140926142600')
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRubrics (20140927150300)
+  [1m[35m (2.6ms)[0m  CREATE TABLE `rubrics` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140927150300')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateAuthorsRubrics (20140927150400)
+  [1m[35m (2.6ms)[0m  CREATE TABLE `authors_rubrics` (`author_id` int(11), `rubric_id` int(11), `position` int(11)) ENGINE=InnoDB
+  [1m[36m (7.4ms)[0m  [1mCREATE UNIQUE INDEX `index_authors_rubrics_on_author_id_and_rubric_id`  ON `authors_rubrics` (`author_id`, `rubric_id`) [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140927150400')[0m
+  [1m[35m (0.8ms)[0m  COMMIT
+Migrating to AddPositionToArticles (20140927181000)
+  [1m[36m (8.2ms)[0m  [1mALTER TABLE `articles` ADD `author_position` int(11)[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140927181000')[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Migrating to RenameAuthorRubrics (20140930165500)
+  [1m[36m (1.1ms)[0m  [1mRENAME TABLE `authors_rubrics` TO `author_rubrics`[0m
+  [1m[35m (7.4ms)[0m  CREATE UNIQUE INDEX `index_author_rubrics_on_author_id_and_rubric_id`  ON `author_rubrics` (`author_id`, `rubric_id`) 
+  [1m[36m (3.7ms)[0m  [1mDROP INDEX `index_authors_rubrics_on_author_id_and_rubric_id` ON `author_rubrics`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140930165500')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Migrating to ReplaceAuthorRubrics (20140930172800)
+  [1m[36m (1.0ms)[0m  [1mDROP TABLE `author_rubrics`[0m
+  [1m[35m (2.1ms)[0m  CREATE TABLE `author_rubrics` (`id` int(11) auto_increment PRIMARY KEY, `author_id` int(11) NOT NULL, `rubric_id` int(11) NOT NULL, `position` int(11)) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140930172800')
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to AddPublishTimeToArticles (20141001155800)
+  [1m[35m (5.7ms)[0m  ALTER TABLE `articles` ADD `publish_time` datetime
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20141001155800')
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreateActiveGalleries (20141224160515)
+  [1m[35m (3.1ms)[0m  CREATE TABLE `active_galleries` (`id` int(11) auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20141224160515')
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Migrating to AddGalleryToArticle (20141224160954)
+  [1m[35m (5.3ms)[0m  ALTER TABLE `articles` ADD `active_gallery_id` int(11)
+  [1m[36m (6.8ms)[0m  [1mCREATE  INDEX `index_articles_on_active_gallery_id`  ON `articles` (`active_gallery_id`) [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20141224160954')[0m
+  [1m[35m (0.7ms)[0m  COMMIT
+Migrating to CreateActiveGalleryPhotos (20141224161545)
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE `active_gallery_photos` (`id` int(11) auto_increment PRIMARY KEY, `active_gallery_id` int(11), `image` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (7.9ms)[0m  CREATE  INDEX `index_active_gallery_photos_on_active_gallery_id`  ON `active_gallery_photos` (`active_gallery_id`) 
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20141224161545')
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
