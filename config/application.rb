@@ -11,6 +11,7 @@ require 'globalize'
 require 'activerecord_sortable'
 
 Bundler.require(*Rails.groups)
+
 require 'rademade_admin'
 
 module Dummy
