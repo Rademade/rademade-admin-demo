@@ -1,0 +1,10 @@
+test:
+  pre:
+    - bundle exec rake db:migrate
+    - bundle exec rake rademade_admin:bower:install
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - bundle exec cap production deploy

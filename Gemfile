@@ -24,3 +24,7 @@ group :development do
 	gem 'capistrano-rvm', '0.1.2'
 	gem 'pry'
 end
+
+group :test, :development do
+	gem 'rspec'
+end
