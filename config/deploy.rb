@@ -22,7 +22,7 @@ set :linked_files, %w{
 }
 
 # dirs we want symlinking to shared
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads}
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads}
 
 set(:config_files, %w(database.yml mongoid.yml secrets.yml))
 
