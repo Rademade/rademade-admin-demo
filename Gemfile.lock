@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/Rademade/rademade_admin.git
-  revision: 943fa4384f02bd0914808f56aae09ac498dc40b9
+  revision: 5f9f553fb6a31d7b3de2f32c0233f1781363c8fa
   branch: feature/new-design
   specs:
     rademade_admin (0.2.2)
@@ -10,6 +10,7 @@ GIT
       carrierwave (~> 0.10)
       ckeditor (~> 4.0)
       coffee-rails (~> 4.0)
+      configurations (~> 2.2.0)
       ejs (~> 1.1)
       i18n-js (>= 2.0)
       kaminari (~> 0.16)
@@ -99,6 +100,7 @@ GEM
       execjs
     coffee-script-source (1.9.1.1)
     colorize (0.7.7)
+    configurations (2.2.0)
     connection_pool (2.2.0)
     diff-lcs (1.2.5)
     ejs (1.1.1)
