@@ -29,4 +29,5 @@ Dummy::Application.configure do
   config.assets.debug = true
   config.assets.initialize_on_precompile = true
 
+  config.active_record.raise_in_transactional_callbacks = true
 end

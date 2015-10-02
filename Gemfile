@@ -3,15 +3,15 @@ source 'https://rubygems.org'
 gem 'rademade_admin', github: 'Rademade/rademade_admin', branch: 'dev'
 
 # Mongoid
-gem 'mongoid', '~> 4.0.2'
+gem 'mongoid'
 gem 'mongoid-paranoia'
 gem 'mongoid-grid_fs'
 gem 'mongoid-tree'
 gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
 
 # Active Record
-gem 'mysql2'
-gem 'globalize', '~> 4.0.2'
+gem 'mysql2', '~> 0.3', '< 0.4'
+gem 'globalize'
 gem 'activerecord_sortable'
 
 # Uploaders
