@@ -1,11 +1,11 @@
 GIT
   remote: git://github.com/Rademade/rademade_admin.git
-  revision: aa9ad79cf90bb507c7cbbb3577af6f84ec46ad61
-  branch: feature/new-design
+  revision: 7b1a1f0d1d2817259233ca782f07763147668a50
+  branch: dev
   specs:
-    rademade_admin (0.2.2)
+    rademade_admin (0.3.0)
       autoprefixer-rails (>= 5.2.0)
-      bower-rails (~> 0.8, >= 0.8.2)
+      bower-rails (>= 0.8.2)
       cancan (~> 1.6)
       carrierwave (~> 0.10)
       ckeditor (~> 4.0)
@@ -14,10 +14,10 @@ GIT
       ejs (~> 1.1)
       i18n-js (>= 2.0)
       kaminari (~> 0.16)
-      light_resizer (~> 0.1, >= 0.1.7)
+      light_resizer (>= 0.1.7)
       mini_magick
-      mongoid_sortable_relation (~> 0.0, >= 0.0.9)
-      rails (~> 4.0, < 4.2)
+      mongoid_sortable_relation (>= 0.0.9)
+      rails (~> 4.0, < 4.3)
       sass-rails (>= 5.0)
       select2-rails (~> 3.5)
       simple_form (~> 3.1)
@@ -123,7 +123,7 @@ GEM
       mime-types (>= 1.16, < 3)
     method_source (0.8.2)
     mime-types (2.6.2)
-    mini_magick (4.3.3)
+    mini_magick (4.3.4)
     minitest (5.8.1)
     mongoid (4.0.2)
       activemodel (~> 4.0)
