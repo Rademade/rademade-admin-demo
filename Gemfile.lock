@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/Rademade/rademade_admin.git
-  revision: 637ada8480234e80b7036a281ebf510e88a64fca
+  revision: 344c8348a82346b666849c360712aad9682e145e
   branch: dev
   specs:
     rademade_admin (0.3.0)
@@ -136,7 +136,7 @@ GEM
       mime-types (>= 1.16, < 3)
     method_source (0.8.2)
     mime-types (2.6.2)
-    mini_magick (4.3.4)
+    mini_magick (4.3.5)
     mini_portile (0.6.2)
     minitest (5.8.1)
     mongoid (4.0.2)
