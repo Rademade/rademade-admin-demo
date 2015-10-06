@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/Rademade/rademade_admin.git
-  revision: f482c8504424e4a2af2173ce8dd20b723f8caa58
+  revision: 6ef54428faf3aadea7571bc5731ce42fb2cad1ff
   branch: dev
   specs:
     rademade_admin (0.3.0)
@@ -229,7 +229,7 @@ GEM
       actionpack (~> 4.0)
       activemodel (~> 4.0)
     slop (3.6.0)
-    sprockets (3.3.5)
+    sprockets (3.4.0)
       rack (> 1, < 3)
     sprockets-rails (2.3.3)
       actionpack (>= 3.0)
