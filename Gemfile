@@ -9,10 +9,16 @@ gem 'mongoid-grid_fs'
 gem 'mongoid-tree'
 gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
 
-# Active Record
+# Sql
 gem 'mysql2', '~> 0.3', '< 0.4'
+
+# Active Record
 gem 'globalize'
 gem 'activerecord_sortable'
+
+# Sequel
+gem 'sequel'
+gem 'carrierwave-sequel', require: 'carrierwave/sequel'
 
 # Uploaders
 gem 'carrierwave'
