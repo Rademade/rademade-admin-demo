@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     # Active record
     admin_resources :authors, :articles, :rubrics
     # Sequel
-    #admin_resources :categories, :items, :colors
+    admin_resources :categories, :items, :colors
 
   end
 
