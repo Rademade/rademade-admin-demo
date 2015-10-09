@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/Rademade/rademade_admin.git
-  revision: 0354b05cb5c61a23956aaad8834cd87a3cb336c2
+  revision: 546292286ed468b46eab1bd894e0fe17fa944d4c
   branch: dev
   specs:
     rademade_admin (0.3.0)
@@ -96,7 +96,7 @@ GEM
     carrierwave-sequel (0.1.0)
       carrierwave
       sequel
-    ckeditor (4.1.3)
+    ckeditor (4.1.4)
       cocaine
       orm_adapter (~> 0.5.0)
     climate_control (0.0.3)
@@ -126,13 +126,16 @@ GEM
     i18n (0.7.0)
     i18n-js (2.1.2)
       i18n
+    image_optimizer (1.3.0)
     json (1.8.3)
     kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
-    light_resizer (0.1.7)
-      rack (~> 1.5)
-      rmagick (~> 2.13)
+    light_resizer (0.2.0)
+      configurations (~> 2.2.0)
+      image_optimizer (~> 1.3.0)
+      rack
+      rmagick
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
