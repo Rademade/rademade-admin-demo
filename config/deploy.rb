@@ -18,13 +18,14 @@ set :keep_releases, 5
 set :linked_files, %w{
   config/database.yml
   config/mongoid.yml
+  config/sequel.yml
   config/secrets.yml
 }
 
 # dirs we want symlinking to shared
 set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads}
 
-set(:config_files, %w(database.yml mongoid.yml secrets.yml))
+set(:config_files, %w(database.yml mongoid.yml sequel.yml secrets.yml))
 
 namespace :deploy do
 
@@ -70,8 +71,20 @@ namespace :deploy do
     end
   end
 
+  desc 'Migrate sequel'
+  task 'sequel:migrate' do
+    on roles(:web) do
+      within release_path do
+        with rails_env: fetch(:rails_env) do
+          execute :rake, 'sequel:migrate'
+        end
+      end
+    end
+  end
+
   before 'deploy:assets:precompile', 'deploy:i18n:js:export'
   before 'deploy:assets:precompile', 'deploy:admin:bower:install'
+  after :updated, 'sequel:migrate'
   after :finishing, 'deploy:restart_passenger'
   after :finishing, 'deploy:cleanup'
 end
