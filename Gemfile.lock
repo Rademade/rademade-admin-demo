@@ -265,6 +265,7 @@ DEPENDENCIES
   mongoid-grid_fs
   mongoid-paranoia
   mongoid-tree
+  mongoid_sortable_relation
   mysql2 (~> 0.3, < 0.4)
   pry
   rademade_admin!

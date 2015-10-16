@@ -8,6 +8,7 @@ gem 'mongoid-paranoia'
 gem 'mongoid-grid_fs'
 gem 'mongoid-tree'
 gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
+gem 'mongoid_sortable_relation'
 
 # Sql
 gem 'mysql2', '~> 0.3', '< 0.4'

@@ -2,6 +2,7 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+require 'mongoid_sortable_relation'
 require 'mongoid'
 require 'sequel'
 require 'carrierwave/mount'
