@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/Rademade/rademade_admin.git
-  revision: 620940b03d688b163a2526fd6ab86c6bb2a7a255
+  revision: 0a59ac4c9842d032d518643454460685e6480583
   branch: dev
   specs:
     rademade_admin (0.3.0)
@@ -276,6 +276,3 @@ DEPENDENCIES
   rademade_admin!
   rspec
   sequel
-
-BUNDLED WITH
-   1.10.6
