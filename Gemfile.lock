@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/Rademade/rademade_admin.git
-  revision: 8688e9dc33b66014fd29caa787d44fa166141919
+  revision: 9d5a02a54dc7639d2202d0a632b0fddc48accc13
   branch: dev
   specs:
     rademade_admin (0.3.0)
