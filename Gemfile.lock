@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/Rademade/rademade_admin.git
-  revision: 9d5a02a54dc7639d2202d0a632b0fddc48accc13
+  revision: 55a0f2a6d16ec3fa61b48b059e3fc4c70d375df1
   branch: dev
   specs:
     rademade_admin (0.3.0)
@@ -14,7 +14,7 @@ GIT
       ejs (~> 1.1)
       i18n-js (>= 2.0)
       kaminari (~> 0.16)
-      light_resizer (~> 0.1.0)
+      light_resizer (>= 0.1.7)
       mini_magick
       rails (~> 4.0, < 4.3)
       sass-rails (>= 4.0)
@@ -125,13 +125,16 @@ GEM
     i18n (0.7.0)
     i18n-js (2.1.2)
       i18n
+    image_optimizer (1.3.0)
     json (1.8.3)
     kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
-    light_resizer (0.1.7)
-      rack (~> 1.5)
-      rmagick (~> 2.13)
+    light_resizer (0.2.0)
+      configurations (~> 2.2.0)
+      image_optimizer (~> 1.3.0)
+      rack
+      rmagick
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
@@ -140,7 +143,7 @@ GEM
     mime-types (2.6.2)
     mini_magick (4.3.6)
     mini_portile (0.6.2)
-    minitest (5.8.1)
+    minitest (5.8.2)
     mongoid (4.0.2)
       activemodel (~> 4.0)
       moped (~> 2.0.0)
@@ -273,6 +276,3 @@ DEPENDENCIES
   rademade_admin!
   rspec
   sequel
-
-BUNDLED WITH
-   1.10.6
