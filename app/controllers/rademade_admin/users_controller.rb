@@ -10,6 +10,7 @@ class RademadeAdmin::UsersController < RademadeAdmin::ModelController
     end
     form do
       email :hint => 'Электронная почта'
+      password
       avatar
       first_name
       last_name
