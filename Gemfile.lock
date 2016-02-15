@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/Rademade/rademade_admin.git
-  revision: ad880d1a6bd97d09e2603425fe393a90e564352d
+  revision: 496084e492d1d53af3fc5819e1e96163c72a24f4
   branch: dev
   specs:
-    rademade_admin (0.3.0)
+    rademade_admin (0.3.1)
       autoprefixer-rails (>= 5.2.0)
       bower-rails (>= 0.8.2)
       cancan (~> 1.6)
