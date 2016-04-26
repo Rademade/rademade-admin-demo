@@ -2,14 +2,14 @@ lock '3.2.1'
 
 set :application, 'RademadeAdminDemo'
 
-set :deploy_to, '/var/www/rademade-admin-demo'
+set :deploy_to, '/home/rademade-admin/website-production'
 
 set :scm, :git
 set :repo_url, 'git@github.com:Rademade/rademade-admin-demo.git'
 
 # setup rvm.
 set :rvm_type,          :system
-set :rvm_ruby_version,  'ruby-2.1.5@rademade-admin-demo'
+set :rvm_ruby_version,  'ruby-2.3.0@rademade-admin-demo'
 
 # how many old releases do we want to keep, not much
 set :keep_releases, 5
