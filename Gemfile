@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rademade_admin', github: 'Rademade/rademade_admin', branch: 'dev'
+gem 'rademade_admin', github: 'Rademade/rademade_admin'
 
 # Mongoid
 gem 'mongoid'
