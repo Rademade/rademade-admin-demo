@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rademade_admin', github: 'Rademade/rademade_admin'
 
 # Mongoid
-gem 'mongoid'
+gem 'mongoid', '~> 4.0.0'
 gem 'mongoid-paranoia'
 gem 'mongoid-grid_fs'
 gem 'mongoid-tree'
