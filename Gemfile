@@ -25,7 +25,7 @@ gem 'carrierwave-sequel', require: 'carrierwave/sequel'
 gem 'carrierwave'
 
 group :development do
-	gem 'capistrano', '3.2.1'
+	gem 'capistrano', '3.4.0'
 	gem 'capistrano-rails', '~> 1.1'
 	gem 'capistrano-bundler'
 	gem 'capistrano-rvm', '0.1.2'
