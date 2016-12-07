@@ -1,0 +1,19 @@
+<div class="nav">
+  <ul class="nav-list">
+    <li class="nav-item">
+      <a href="/" class="nav-main-logo"><span><%= t('rademade_admin.project') %></span></a>
+    </li>
+  </ul>
+  <ul class="nav-list with-scroll"><%= render @template_service.navigation_menu_block %></ul>
+  <div class="nav-box">
+    <div class="nav-user">
+      <i class="user-img"></i>
+      <span class="user-name"><%= @current_user %></span>
+      <%
+        concat link_to '', rademade_admin_route(:logout_sessions_url), {
+          :method => :delete,
+          :class => 'user-settings'
+        }
+    %></div>
+  </div>
+</div>
