@@ -181,6 +181,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    puma (3.12.1)
     rack (1.6.5)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -275,9 +276,10 @@ DEPENDENCIES
   mongoid_sortable_relation
   mysql2
   pry
+  puma
   rademade_admin!
   rspec
   sequel
 
 BUNDLED WITH
-   1.13.6
+   1.17.2
