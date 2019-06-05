@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'rails', '~> 4.0'
 gem 'rademade_admin', github: 'Rademade/rademade_admin'
 
 # Mongoid
