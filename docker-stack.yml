@@ -1,0 +1,76 @@
+version: "3.5"
+
+networks:
+  mariadb:
+  mongo:
+
+volumes:
+  db-mariadb:
+  db-mongo:
+  user-uploads:
+
+secrets:
+  mariadb-root-password:
+    file: .mariadb-root-password
+  mariadb-user-password:
+    file: .mariadb-user-password
+  mongo-root-password:
+    file: .mongo-root-password
+  mongo-user-password:
+    file: .mongo-user-password
+
+services:
+  site:
+    image: $REGISTRY/$PROJECT_NAME
+    environment:
+      RAILS_ENV: production
+      MONGO_DATABASE: $MONGO_DATABASE
+      MONGO_USER: $MONGO_USER
+      MARIADB_DATABASE: $MARIADB_DATABASE
+      MARIADB_USER: $MARIADB_USER
+      INSIDE_DOCKER: 1
+    networks:
+      - mariadb
+      - mongo
+    ports:
+      - 3000:3000
+    secrets:
+      - mariadb-user-password
+      - mongo-user-password
+    volumes:
+      - user-uploads:/site/public/uploads
+    depends_on:
+      - db-mariadb
+      - db-mongo
+
+  db-mariadb:
+    image: mariadb:5.5
+    environment:
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mariadb-root-password
+      MYSQL_DATABASE: $MARIADB_DATABASE
+      MYSQL_USER: $MARIADB_USER
+      MYSQL_PASSWORD_FILE: /run/secrets/mariadb-user-password
+    volumes:
+      - db-mariadb:/var/lib/mysql
+    secrets:
+      - mariadb-root-password
+      - mariadb-user-password
+    networks:
+      - mariadb
+
+  db-mongo:
+    image: mongo:3.2
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD_FILE: /run/secrets/mongo-root-password
+      MONGO_INITDB_DATABASE: $MONGO_DATABASE
+      MONGO_INITDB_USER: $MONGO_USER
+      MONGO_INITDB_PASSWORD_FILE: /run/secrets/mongo-user-password
+    volumes:
+      - db-mongo:/data/db
+      - ./docker/init-mongo.sh:/docker-entrypoint-initdb.d/init-mongo.sh
+    secrets:
+      - mongo-root-password
+      - mongo-user-password
+    networks:
+      - mongo
