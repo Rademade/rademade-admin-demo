@@ -12,7 +12,7 @@ gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
 gem 'mongoid_sortable_relation'
 
 # Sql
-gem 'mysql2'
+gem 'mysql2', '~> 0.4.5'
 
 # Active Record
 gem 'globalize'
