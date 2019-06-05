@@ -14,7 +14,7 @@ test:
 
 production:
   adapter: mysql2
-  host: localhost
-  database: rademade_admin
-  user: root
-  password: root
+  host: db-mariadb
+  user: <%= ENV['MARIADB_USER'] %>
+  password: <%= ENV['MARIADB_PASSWORD'] %>
+  database: <%= ENV['MARIADB_DATABASE'] %>

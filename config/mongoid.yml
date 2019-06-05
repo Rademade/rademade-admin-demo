@@ -13,6 +13,9 @@ test:
 production:
   clients:
     default:
-      database: rademade_admin
+      database: <%= ENV['MONGO_DATABASE'] %>
       hosts:
-        - localhost:27017
+        - db-mongo:27017
+      options:
+        user: <%= ENV['MONGO_USER'] %>
+        password: <%= ENV['MONGO_PASSWORD'] %>
