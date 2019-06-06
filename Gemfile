@@ -4,7 +4,7 @@ gem 'rails', '~> 4.0'
 gem 'rademade_admin', github: 'Rademade/rademade_admin', tag: '0.2.5'
 
 # Mongoid
-gem 'mongoid', '~> 4.0.0'
+gem 'mongoid', '~> 5.0'
 gem 'mongoid-paranoia'
 gem 'mongoid-grid_fs'
 gem 'mongoid-tree'
