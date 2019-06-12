@@ -87,4 +87,6 @@ Dummy::Application.configure do
     logger.formatter = config.log_formatter
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
+
+  config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
 end
