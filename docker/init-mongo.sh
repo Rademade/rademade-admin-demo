@@ -5,6 +5,6 @@ var admin = db.getSiblingDB('admin');
 admin.auth(rootUser, rootPassword);
 
 var user = '$MONGO_INITDB_USER';
-var passwd = '$(cat "$MONGO_INITDB_PASSWORD_FILE")';
+var passwd = '$MONGO_INITDB_PASSWORD';
 db.createUser({user: user, pwd: passwd, roles: ["readWrite"]});
 EOF
