@@ -76,10 +76,56 @@ ActiveRecord::Schema.define(version: 20141224161545) do
     t.datetime "updated_at"
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "name",  limit: 255, null: false
+    t.string "image", limit: 255
+  end
+
+  create_table "colors", force: :cascade do |t|
+    t.string "name", limit: 255, null: false
+  end
+
+  create_table "colors_items", id: false, force: :cascade do |t|
+    t.integer "color_id", limit: 4
+    t.integer "item_id",  limit: 4
+  end
+
+  add_index "colors_items", ["color_id", "item_id"], name: "colors_items_color_id_item_id_index", unique: true, using: :btree
+  add_index "colors_items", ["item_id"], name: "item_id", using: :btree
+
+  create_table "items", force: :cascade do |t|
+    t.integer "category_id",       limit: 4
+    t.string  "name",              limit: 255, null: false
+    t.float   "price",             limit: 53
+    t.boolean "status"
+    t.integer "sequel_gallery_id", limit: 4
+  end
+
+  add_index "items", ["category_id"], name: "category_id", using: :btree
+  add_index "items", ["sequel_gallery_id"], name: "sequel_gallery_id", using: :btree
+
   create_table "rubrics", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  create_table "schema_migrations_sequel", primary_key: "filename", force: :cascade do |t|
+  end
+
+  create_table "sequel_galleries", force: :cascade do |t|
+  end
+
+  create_table "sequel_gallery_photos", force: :cascade do |t|
+    t.integer "sequel_gallery_id", limit: 4
+    t.string  "image",             limit: 255
+  end
+
+  add_index "sequel_gallery_photos", ["sequel_gallery_id"], name: "sequel_gallery_id", using: :btree
+
+  add_foreign_key "colors_items", "colors", name: "colors_items_ibfk_1"
+  add_foreign_key "colors_items", "items", name: "colors_items_ibfk_2"
+  add_foreign_key "items", "categories", name: "items_ibfk_1"
+  add_foreign_key "items", "sequel_galleries", name: "items_ibfk_2"
+  add_foreign_key "sequel_gallery_photos", "sequel_galleries", name: "sequel_gallery_photos_ibfk_1"
 end
