@@ -1,0 +1,9 @@
+.git
+.dockerignore
+.env
+log/*
+tmp/*
+vendor/bundle
+node_modules
+public/packs-test
+public/uploads

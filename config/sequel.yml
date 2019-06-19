@@ -1,25 +1,15 @@
-development:
+default: &default
   adapter: mysql2
-<% if ENV['INSIDE_DOCKER'] %>
-  host: db-mariadb
-  user: <%= ENV['MARIADB_USER'] %>
-  password: <%= ENV['MARIADB_PASSWORD'] %>
-  database: <%= ENV['MARIADB_DATABASE'] %>
-<% else %>
-  user: root
-  database: rademade_admin_demo_development
-<% end %>
+  host: <%= ENV['MYSQL_HOST'] %>
+  user: <%= ENV['MYSQL_USER'] %>
+  password: <%= ENV['MYSQL_PASSWORD'] %>
+  database: <%= ENV['MYSQL_DATABASE'] %>
+
+development:
+  <<: *default
 
 test:
-  adapter: mysql2
-  host: localhost
-  database: rademade_admin_test
-  user: root
-  password: root
+  <<: *default
 
 production:
-  adapter: mysql2
-  host: db-mariadb
-  user: <%= ENV['MARIADB_USER'] %>
-  password: <%= ENV['MARIADB_PASSWORD'] %>
-  database: <%= ENV['MARIADB_DATABASE'] %>
+  <<: *default

@@ -1,22 +1,27 @@
 # rademade-admin-demo
 
-Run the site locally:
+Requirements:
 ```
-# create rademade_admin_demo_development database
-bin/rake db:migrate
-bin/rake db:migrate:sequel
-bin/rake rademade_admin:bower:install
-bin/rails server
+Docker
+Docker Compose
 ```
 
-Run the site locally with Docker:
+Preparations:
 ```
-. .env
-docker build . -t "$REGISTRY/$PROJECT_NAME"
+docker-compose pull
+docker-compose build
+docker-compose run app bundle exec "wait-for-it -t 30 -h db -p 3306 -- rake db:migrate"
+docker-compose run app bundle exec "wait-for-it -t 30 -h db -p 3306 -- rake db:migrate:sequel"
+docker-compose run app bundle exec rake rademade_admin:bower:install
+docker-compose run app bundle exec rake bower:install
+```
+
+Run the site locally:
+```
 docker-compose up
 ```
 
 Create a user:
 ```
-User.create(email: 'u1@gmail.com', password: '123456', admin: true)
+docker-compose run app bundle exec rails runner "User.create(email: 'admin@example.com', password: '123456', admin: true)"
 ```

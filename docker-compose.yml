@@ -1,60 +1,51 @@
 version: "3.5"
 
-networks:
-  mariadb:
+services:
+  app:
+    build:
+      context: .
+    command: sh bin/start-dev
+    volumes:
+      - ./:/app
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: development
+      RAILS_ENV: development
+      RACK_ENV: development
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+      - mongo
+    tty: true
+    stdin_open: true
+
+  db:
+    image: mariadb:5
+    volumes:
+      - dbdata:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_USER}
+    ports:
+      - "3306:3306"
+
   mongo:
+    image: mongo:3.6
+    environment:
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER}
+      MONGO_INITDB_DATABASE: ${MONGO_DATABASE}
+      MONGO_INITDB_USER: ${MONGO_USER}
+      MONGO_INITDB_PASSWORD: ${MONGO_PASSWORD}
+    volumes:
+      - mongo:/data/db
+      - ./bin/init-mongo:/docker-entrypoint-initdb.d/init-mongo.sh
 
 volumes:
-  db-mariadb:
-  db-mongo:
-  user-uploads:
-
-services:
-  site:
-    image: $REGISTRY/$PROJECT_NAME
-    environment:
-      RAILS_ENV: development
-      MONGO_DATABASE: $MONGO_DEV_DATABASE
-      MONGO_USER: $MONGO_USER
-      MONGO_PASSWORD: $MONGO_PASSWORD
-      MARIADB_DATABASE: $MARIADB_DEV_DATABASE
-      MARIADB_USER: $MARIADB_USER
-      MARIADB_PASSWORD: $MARIADB_PASSWORD
-      INSIDE_DOCKER: 1
-    networks:
-      - mariadb
-      - mongo
-    ports:
-      - 3000:3000
-    volumes:
-      - user-uploads:/site/public/uploads
-      - .:/site
-    depends_on:
-      - db-mariadb
-      - db-mongo
-
-  db-mariadb:
-    image: mariadb:5.5
-    environment:
-      MYSQL_ROOT_PASSWORD: $MARIADB_ROOT_PASSWORD
-      MYSQL_DATABASE: $MARIADB_DEV_DATABASE
-      MYSQL_USER: $MARIADB_USER
-      MYSQL_PASSWORD: $MARIADB_PASSWORD
-    volumes:
-      - db-mariadb:/var/lib/mysql
-    networks:
-      - mariadb
-
-  db-mongo:
-    image: mongo:3.2
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: $MONGO_ROOT_PASSWORD
-      MONGO_INITDB_DATABASE: $MONGO_DEV_DATABASE
-      MONGO_INITDB_USER: $MONGO_USER
-      MONGO_INITDB_PASSWORD: $MONGO_PASSWORD
-    volumes:
-      - db-mongo:/data/db
-      - ./docker/init-mongo.sh:/docker-entrypoint-initdb.d/init-mongo.sh
-    networks:
-      - mongo
+  dbdata:
+  mongo:
+  uploads:
