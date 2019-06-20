@@ -16,8 +16,8 @@ services:
       RAILS_ENV: production
       MONGO_USER: $MONGO_USER
       MONGO_DATABASE: $MONGO_DATABASE
-      MARIADB_USER: $MARIADB_USER
-      MARIADB_DATABASE: $MARIADB_DATABASE
+      MYSQL_USER: $MYSQL_USER
+      MYSQL_DATABASE: $MYSQL_DATABASE
       INSIDE_DOCKER: 1
     networks:
       - db
@@ -36,9 +36,9 @@ services:
       - dbdata:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: $MYSQL_USER
-      MYSQL_USER: $MARIADB_USER
+      MYSQL_USER: $MYSQL_USER
       MYSQL_PASSWORD: $MYSQL_USER
-      MYSQL_DATABASE: $MARIADB_DATABASE
+      MYSQL_DATABASE: $MYSQL_DATABASE
     networks:
       - db
 
