@@ -20,7 +20,6 @@ services:
       MYSQL_HOST: $MYSQL_HOST
       MYSQL_USER: $MYSQL_USER
       MYSQL_DATABASE: $MYSQL_DATABASE
-      INSIDE_DOCKER: 1
     networks:
       - db
       - mongo
