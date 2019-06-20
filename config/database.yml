@@ -6,7 +6,7 @@ default: &default
   host: <%= ENV['MYSQL_HOST'] || 'localhost' %>
   port: <%= ENV['MYSQL_PORT'] || '3306' %>
   username: <%= ENV['MYSQL_USER'] || ENV['USER'] %>
-  password: <%= ENV['MYSQL_PASSWORD'] %>
+  password: <%= ENV['MYSQL_PASSWORD'] || ENV['MYSQL_USER'] %>
   database: <%= ENV['MYSQL_DATABASE'] || Rails.application.class.parent_name.downcase %>
   encoding: utf8
   timeout: 5000

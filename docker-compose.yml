@@ -26,7 +26,7 @@ services:
     volumes:
       - dbdata:/var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_USER}
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_USER}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
@@ -37,9 +37,9 @@ services:
     image: mongo:3.6
     environment:
       MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER}
-      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_USER}
       MONGO_INITDB_USER: ${MONGO_USER}
-      MONGO_INITDB_PASSWORD: ${MONGO_PASSWORD}
+      MONGO_INITDB_PASSWORD: ${MONGO_USER}
       MONGO_INITDB_DATABASE: ${MONGO_DATABASE}
     volumes:
       - mongo:/data/db

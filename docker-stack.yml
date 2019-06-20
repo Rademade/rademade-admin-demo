@@ -15,10 +15,8 @@ services:
     environment:
       RAILS_ENV: production
       MONGO_USER: $MONGO_USER
-      MONGO_PASSWORD: $MONGO_PASSWORD
       MONGO_DATABASE: $MONGO_DATABASE
       MARIADB_USER: $MARIADB_USER
-      MARIADB_PASSWORD: $MARIADB_PASSWORD
       MARIADB_DATABASE: $MARIADB_DATABASE
       INSIDE_DOCKER: 1
     networks:
@@ -37,9 +35,9 @@ services:
     volumes:
       - db-mariadb:/var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD: $MARIADB_ROOT_PASSWORD
+      MYSQL_ROOT_PASSWORD: $MYSQL_USER
       MYSQL_USER: $MARIADB_USER
-      MYSQL_PASSWORD: $MARIADB_PASSWORD
+      MYSQL_PASSWORD: $MYSQL_USER
       MYSQL_DATABASE: $MARIADB_DATABASE
     networks:
       - mariadb
@@ -48,9 +46,9 @@ services:
     image: mongo:3.2
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: $MONGO_ROOT_PASSWORD
+      MONGO_INITDB_ROOT_PASSWORD: $MONGO_USER
       MONGO_INITDB_USER: $MONGO_USER
-      MONGO_INITDB_PASSWORD: $MONGO_PASSWORD
+      MONGO_INITDB_PASSWORD: $MONGO_USER
       MONGO_INITDB_DATABASE: $MONGO_DATABASE
     volumes:
       - db-mongo:/data/db

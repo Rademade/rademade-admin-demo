@@ -6,7 +6,7 @@ default: &default
         - <%= ENV['MONGO_HOST'] %>
       options:
         user: <%= ENV['MONGO_USER'] %>
-        password: <%= ENV['MONGO_PASSWORD'] %>
+        password: <%= ENV['MONGO_PASSWORD'] || ENV['MONGO_USER'] %>
 
 development:
   <<: *default
