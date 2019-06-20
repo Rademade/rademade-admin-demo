@@ -1,7 +1,7 @@
 version: "3.5"
 
 networks:
-  mariadb:
+  db:
   mongo:
 
 volumes:
@@ -20,7 +20,7 @@ services:
       MARIADB_DATABASE: $MARIADB_DATABASE
       INSIDE_DOCKER: 1
     networks:
-      - mariadb
+      - db
       - mongo
     ports:
       - 3000:3000
@@ -40,7 +40,7 @@ services:
       MYSQL_PASSWORD: $MYSQL_USER
       MYSQL_DATABASE: $MARIADB_DATABASE
     networks:
-      - mariadb
+      - db
 
   db-mongo:
     image: mongo:3.2
