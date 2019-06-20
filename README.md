@@ -10,6 +10,7 @@ Preparations:
 ```
 docker-compose pull
 docker-compose build
+docker-compose run app bundle install
 docker-compose run app bundle exec "wait-for-it -t 30 -h db -p 3306 -- rake db:migrate"
 docker-compose run app bundle exec "wait-for-it -t 30 -h db -p 3306 -- rake db:migrate:sequel"
 docker-compose run app bundle exec rake rademade_admin:bower:install
