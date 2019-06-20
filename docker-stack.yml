@@ -10,7 +10,7 @@ volumes:
   user-uploads:
 
 services:
-  site:
+  app:
     image: $REGISTRY/$PROJECT_NAME
     environment:
       RAILS_ENV: production
