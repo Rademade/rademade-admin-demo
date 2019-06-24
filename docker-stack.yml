@@ -29,6 +29,10 @@ services:
         - "traefik.port=80"
         - "traefik.docker.network=proxy"
         - "traefik.frontend.rule=Host:rademade-admin-demo.demo-rademade.com"
+      replicas: 1
+      placement:
+        constraints:
+          - node.labels.role == ${TARGET_NODE}
 
   app:
     image: $REGISTRY/$PROJECT_NAME
@@ -50,6 +54,11 @@ services:
     depends_on:
       - db
       - mongo
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - node.labels.role == ${TARGET_NODE}
 
   db:
     image: mariadb:5.5
@@ -62,6 +71,11 @@ services:
       MYSQL_DATABASE: $MYSQL_DATABASE
     networks:
       - db
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - node.labels.role == ${TARGET_NODE}
 
   mongo:
     image: mongo:3.2
@@ -76,3 +90,8 @@ services:
       - ./bin/init-mongo:/docker-entrypoint-initdb.d/init-mongo.sh
     networks:
       - mongo
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - node.labels.role == ${TARGET_NODE}
