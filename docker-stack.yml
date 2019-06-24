@@ -4,6 +4,8 @@ networks:
   db:
   mongo:
   nginx:
+  proxy:
+    external: true
 
 volumes:
   dbdata:
@@ -15,14 +17,18 @@ services:
   nginx:
     image: nginx:stable
     networks:
+      - proxy
       - nginx
-    ports:
-      - 3000:80
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
       - docroot:/docroot
     depends_on:
       - app
+    deploy:
+      labels:
+        - "traefik.port=80"
+        - "traefik.docker.network=proxy"
+        - "traefik.frontend.rule=Host:rademade-admin-demo.demo-rademade.com"
 
   app:
     image: $REGISTRY/$PROJECT_NAME
