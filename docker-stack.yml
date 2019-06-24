@@ -3,13 +3,27 @@ version: "3.5"
 networks:
   db:
   mongo:
+  nginx:
 
 volumes:
   dbdata:
   mongo:
   user-uploads:
+  docroot:
 
 services:
+  nginx:
+    image: nginx:stable
+    networks:
+      - nginx
+    ports:
+      - 3000:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - docroot:/docroot
+    depends_on:
+      - app
+
   app:
     image: $REGISTRY/$PROJECT_NAME
     environment:
@@ -23,10 +37,10 @@ services:
     networks:
       - db
       - mongo
-    ports:
-      - 3000:3000
+      - nginx
     volumes:
       - user-uploads:/site/public/uploads
+      - docroot:/docroot
     depends_on:
       - db
       - mongo
