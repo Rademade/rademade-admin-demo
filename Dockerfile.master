@@ -1,0 +1,25 @@
+FROM ruby:2.3
+
+ENV RAILS_ENV production
+
+RUN apt-get update && \
+    apt-get install -qq -y --fix-missing --no-install-recommends wait-for-it && \
+    (curl -sS https://deb.nodesource.com/setup_8.x | bash -) && \
+    apt-get install -qq -y --no-install-recommends nodejs && \
+    echo "{ \"allow_root\": true }" >> /root/.bowerrc && \
+    gem install bundler && \
+    npm install -g bower
+
+WORKDIR /app
+COPY . .
+
+RUN bundle install --without development test --deployment \
+    && : disable admin_resources in config/routes.rb so that it\'d not connect to db \
+    && sed -Ei 's/^(\s*admin_resources)\b/# TEMPORARY \1/' config/routes.rb \
+    && bin/rake rademade_admin:bower:install \
+    && bin/rake bower:install \
+    && RAILS_ENV=production bin/rake assets:precompile \
+    && : enable admin_resources back \
+    && sed -Ei 's/^# TEMPORARY //' config/routes.rb
+
+ENTRYPOINT ["bin/entrypoint.sh"]
