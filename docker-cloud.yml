@@ -53,7 +53,7 @@ services:
     networks:
       - app
     volumes:
-      - user-uploads:/site/public/uploads
+      - user-uploads:/app/public/uploads
       - docroot:/docroot
     depends_on:
       - db
