@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -a && source .env
+
+DOCKER_FILE="Dockerfile.${BRANCH}"
+
+if [ ! -f $DOCKER_FILE ]; then
+  DOCKER_FILE="Dockerfile"
+fi
+
+docker build -t ${REGISTRY_URL}:${BRANCH} -f $DOCKER_FILE .
+docker push ${REGISTRY_URL}
