@@ -42,7 +42,7 @@ services:
           - node.labels.role == ${TARGET_NODE}
 
   app:
-    image: $REGISTRY/$PROJECT_NAME
+    image: $REGISTRY_HOST/$PROJECT_NAME
     environment:
       RAILS_ENV: production
       MONGO_HOST: $MONGO_HOST
