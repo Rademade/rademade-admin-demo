@@ -33,7 +33,7 @@ services:
       labels:
         - "traefik.port=80"
         - "traefik.docker.network=proxy"
-        - "traefik.frontend.rule=Host:rademade-admin-demo.demo-rademade.com"
+        - "traefik.frontend.rule=Host:$VIRTUAL_HOST"
       replicas: 1
       placement:
         constraints:
