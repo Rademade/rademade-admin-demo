@@ -5,7 +5,7 @@ ENV RAILS_ENV production
 RUN apt-get update && \
     (curl -sS https://deb.nodesource.com/setup_8.x | bash -) && \
     apt-get install -qq -y --fix-missing --no-install-recommends \
-        rsync wait-for-it nodejs && \
+        wait-for-it nodejs && \
     echo "{ \"allow_root\": true }" >> /root/.bowerrc && \
     gem install bundler && \
     npm install -g bower
@@ -21,5 +21,22 @@ RUN bundle install --without development test --deployment \
     && RAILS_ENV=production bin/rake assets:precompile \
     && : enable admin_resources back \
     && sed -Ei 's/^# TEMPORARY //' config/routes.rb
+
+
+FROM ruby:2.3
+
+ENV INSTALL_PATH  /app
+
+RUN apt-get update && \
+    (curl -sS https://deb.nodesource.com/setup_8.x | bash -) && \
+    apt-get install -qq -y --fix-missing --no-install-recommends \
+        rsync wait-for-it nodejs && \
+    gem install bundler
+
+WORKDIR $INSTALL_PATH
+COPY . .
+COPY --from=0 $INSTALL_PATH/vendor/bundle vendor/bundle
+COPY --from=0 $INSTALL_PATH/public/assets public/assets
+RUN bundle install --without development test --deployment
 
 ENTRYPOINT ["bin/entrypoint.sh"]
