@@ -51,6 +51,7 @@ services:
       MYSQL_HOST: $MYSQL_HOST
       MYSQL_USER: $MYSQL_USER
       MYSQL_DATABASE: $MYSQL_DATABASE
+      RAILS_SERVE_STATIC_FILES: 1
     networks:
       - app
     volumes:
