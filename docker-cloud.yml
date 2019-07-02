@@ -54,6 +54,7 @@ services:
       RAILS_MIN_THREADS: $RAILS_MIN_THREADS
       RAILS_MAX_THREADS: $RAILS_MAX_THREADS
       WEB_CONCURRENCY: $WEB_CONCURRENCY
+      SECRET_KEY_BASE: $SECRET_KEY_BASE
     networks:
       - app
     volumes:
