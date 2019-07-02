@@ -52,6 +52,7 @@ services:
       MYSQL_USER: $MYSQL_USER
       MYSQL_DATABASE: $MYSQL_DATABASE
       RAILS_SERVE_STATIC_FILES: 1
+      PROJECT_NAME: $PROJECT_NAME
     networks:
       - app
     volumes:
