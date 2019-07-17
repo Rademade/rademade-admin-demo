@@ -15,10 +15,21 @@ RUN apt-get update && \
 WORKDIR /app
 COPY . .
 
+# There's a bug in globalize gem that makes loading a model trigger a database
+# connection: https://github.com/globalize/globalize/issues/723
+# Additionally, loading a sequel model makes it connect to the database
+# in any case.
+# Considering that eager loading is disabled, commenting out resources in
+# config/routes.rb makes it not load the model files and not
+# connect to the database.
 RUN bundle install --without development test --deployment \
+    && : disable admin_resources in config/routes.rb so that it\'d not connect to db \
+    && sed -Ei 's/^(\s*admin_resources)\b/# TEMPORARY \1/' config/routes.rb \
     && bin/rake rademade_admin:bower:install \
     && bin/rake bower:install \
-    && bin/rake assets:precompile
+    && bin/rake assets:precompile \
+    && : enable admin_resources back \
+    && sed -Ei 's/^# TEMPORARY //' config/routes.rb
 
 
 FROM ruby:2.3
