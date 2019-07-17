@@ -27,7 +27,7 @@ RUN bundle install --without development test --deployment \
     && sed -Ei 's/^(\s*admin_resources)\b/# TEMPORARY \1/' config/routes.rb \
     && bin/rake rademade_admin:bower:install \
     && bin/rake bower:install \
-    && RAILS_ENV=production bin/rake assets:precompile \
+    && bin/rake assets:precompile \
     && : enable admin_resources back \
     && sed -Ei 's/^# TEMPORARY //' config/routes.rb
 

@@ -44,7 +44,7 @@ services:
       replicas: 1
       placement:
         constraints:
-          - node.labels.role == ${TARGET_NODE}
+          - node.labels.role == $TARGET_NODE
 
   app:
     image: $REGISTRY_HOST/$PROJECT_IMAGE:$PROJECT_TAG
@@ -72,7 +72,7 @@ services:
       replicas: 1
       placement:
         constraints:
-          - node.labels.role == ${TARGET_NODE}
+          - node.labels.role == $TARGET_NODE
 
   db:
     image: mariadb:5.5
@@ -89,7 +89,7 @@ services:
       replicas: 1
       placement:
         constraints:
-          - node.labels.role == ${TARGET_NODE}
+          - node.labels.role == $TARGET_NODE
 
   mongo:
     image: mongo:3.2
@@ -110,4 +110,4 @@ services:
       replicas: 1
       placement:
         constraints:
-          - node.labels.role == ${TARGET_NODE}
+          - node.labels.role == $TARGET_NODE
