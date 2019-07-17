@@ -41,6 +41,7 @@ RUN apt-get update && \
     apt-get install -qq -y --fix-missing --no-install-recommends \
         imagemagick jpegoptim optipng \
         rsync wait-for-it nodejs && \
+    apt-get clean && rm -rf /var/lib/apt/lists/* && \
     gem install bundler
 
 WORKDIR $INSTALL_PATH
