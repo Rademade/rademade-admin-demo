@@ -10,10 +10,7 @@ require 'carrierwave/mongoid'
 require 'carrierwave/sequel'
 require 'carrierwave/orm/activerecord'
 require 'light_resizer'
-
 require 'globalize'
-require_dependency 'lib/globalize_fix'
-
 require 'activerecord_sortable'
 
 Bundler.require(*Rails.groups)
