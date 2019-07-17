@@ -9,7 +9,7 @@ services:
     volumes:
       - ./:/app
     ports:
-      - "3000:3000"
+      - "$APP_PORT:$APP_PORT"
     depends_on:
       - db
       - mongo
@@ -24,7 +24,7 @@ services:
       MYSQL_PASSWORD: $MYSQL_USER
       MYSQL_DATABASE: $MYSQL_DATABASE
     ports:
-      - "3306:3306"
+      - "$MYSQL_PORT:$MYSQL_PORT"
 
   mongo:
     image: mongo:3.6
@@ -37,6 +37,8 @@ services:
     volumes:
       - mongo:/data/db
       - ./bin/init-mongo:/docker-entrypoint-initdb.d/init-mongo.sh
+    ports:
+      - "$MONGO_PORT:$MONGO_PORT"
 
 volumes:
   dbdata:
