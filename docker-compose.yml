@@ -15,7 +15,7 @@ services:
       - mongo
 
   db:
-    image: mariadb:5
+    image: mariadb:5.5
     volumes:
       - dbdata:/var/lib/mysql
     environment:
@@ -27,7 +27,7 @@ services:
       - "$MYSQL_PORT:$MYSQL_PORT"
 
   mongo:
-    image: mongo:3.6
+    image: mongo:3.2
     environment:
       MONGO_INITDB_ROOT_USERNAME: $MONGO_USER
       MONGO_INITDB_ROOT_PASSWORD: $MONGO_USER
