@@ -5,6 +5,8 @@ ENV RAILS_ENV production
 RUN apt-get update && \
     (curl -sS https://deb.nodesource.com/setup_8.x | bash -) && \
     apt-get install -qq -y --fix-missing --no-install-recommends \
+        imagemagick libmagickwand-dev jpegoptim optipng \
+        build-essential default-libmysqlclient-dev \
         wait-for-it nodejs && \
     echo "{ \"allow_root\": true }" >> /root/.bowerrc && \
     gem install bundler && \
@@ -37,6 +39,7 @@ ENV INSTALL_PATH  /app
 RUN apt-get update && \
     (curl -sS https://deb.nodesource.com/setup_8.x | bash -) && \
     apt-get install -qq -y --fix-missing --no-install-recommends \
+        imagemagick jpegoptim optipng \
         rsync wait-for-it nodejs && \
     gem install bundler
 
