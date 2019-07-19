@@ -6,5 +6,15 @@ if [ ! -f $DOCKER_FILE ]; then
   DOCKER_FILE="Dockerfile"
 fi
 
-docker build -t "$REGISTRY_URL:$BRANCH" -f "$DOCKER_FILE" .
-docker push "$REGISTRY_URL"
+# app
+docker build -t "$REGISTRY_URL/app:$BRANCH" -f "$DOCKER_FILE" .
+
+# nginx
+tmp_container=$(docker container create "$REGISTRY_URL/app:$BRANCH")
+docker container cp "$tmp_container":/app/public/assets ./public
+docker container rm -f "$tmp_container"
+docker build -t "$REGISTRY_URL/nginx:$BRANCH" -f nginx/Dockerfile .
+
+# push
+docker push "$REGISTRY_URL/app"
+docker push "$REGISTRY_URL/nginx"
