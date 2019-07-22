@@ -1,9 +1,5 @@
-.git
-.dockerignore
-.env
-log/*
-tmp/*
-vendor/bundle
-node_modules
-public/packs-test
-public/uploads
+/.git
+/log
+/public/uploads
+/tmp
+/vendor/bundle
