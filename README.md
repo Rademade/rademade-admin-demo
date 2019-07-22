@@ -10,12 +10,15 @@ Preparations:
 ```
 docker-compose pull
 docker-compose build
-docker-compose run app bundle install
-docker-compose run app bundle exec "wait-for-it -t 30 -h db -p 3306 -- rake db:migrate"
-docker-compose run app bundle exec "wait-for-it -t 30 -h db -p 3306 -- rake db:migrate:sequel"
-docker-compose run app bundle exec "wait-for-it -t 30 -h db -p 3306 -- rake db:schema:dump"
-docker-compose run app bundle exec rake rademade_admin:bower:install
-docker-compose run app bundle exec rake bower:install
+docker-compose run app sh -c '
+    bundle install
+    wait-for-it -h db -p 3306
+    rake db:migrate
+    rake db:migrate:sequel
+    rake db:schema:dump
+    rake rademade_admin:bower:install
+    rake bower:install
+'
 ```
 
 Run the site locally:
