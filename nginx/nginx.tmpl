@@ -46,10 +46,8 @@ http {
     root /static;
 
     location / {
-      if (-f $request_filename) {
-        expires  max;
-        access_log  off;
-      }
+      expires  max;
+      access_log  off;
       try_files $uri @app;
     }
 
