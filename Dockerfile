@@ -11,7 +11,7 @@ ENV PATH $GEM_HOME/bin:$PATH
 
 RUN apt-get update && \
     (curl -sS https://deb.nodesource.com/setup_8.x | bash -) && \
-    apt-get install -qq -y --fix-missing --no-install-recommends \
+    apt-get install -qq -y --no-install-recommends \
         imagemagick libmagickwand-dev jpegoptim optipng \
         build-essential default-libmysqlclient-dev libffi-dev \
         wait-for-it nodejs && \

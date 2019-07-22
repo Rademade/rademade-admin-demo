@@ -1,7 +1,7 @@
 FROM nginx:stable
 
 RUN apt-get update && \
-    apt-get install -qq -y --fix-missing --no-install-recommends \
+    apt-get install -qq -y --no-install-recommends \
         wait-for-it && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
