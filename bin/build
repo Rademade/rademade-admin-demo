@@ -1,0 +1,20 @@
+#!/bin/bash
+
+set -a && source .env
+DOCKER_FILE="Dockerfile.$BRANCH"
+if [ ! -f $DOCKER_FILE ]; then
+  DOCKER_FILE="Dockerfile"
+fi
+
+# app
+docker build -t "$REGISTRY_URL/app:$BRANCH" -f "$DOCKER_FILE" .
+
+# nginx
+tmp_container=$(docker container create "$REGISTRY_URL/app:$BRANCH")
+docker container cp "$tmp_container":/app/public/assets ./public
+docker container rm -f "$tmp_container"
+docker build -t "$REGISTRY_URL/nginx:$BRANCH" -f nginx/Dockerfile .
+
+# push
+docker push "$REGISTRY_URL/app"
+docker push "$REGISTRY_URL/nginx"

@@ -1,29 +1,23 @@
-development:
+default: &default
+<% if ENV['DATABASE_URL'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+<% else %>
   adapter: mysql2
-  database: rademade_admin_dev
+  host: <%= ENV['MYSQL_HOST'] || 'localhost' %>
+  port: <%= ENV['MYSQL_PORT'] || '3306' %>
+  username: <%= ENV['MYSQL_USER'] || ENV['USER'] %>
+  password: <%= ENV['MYSQL_PASSWORD'] || ENV['MYSQL_USER'] %>
+  database: <%= ENV['MYSQL_DATABASE'] || Rails.application.class.parent_name.downcase %>
   encoding: utf8
-  collation: utf8_general_ci
-  username: root
-  password: root
-  pool: 5
   timeout: 5000
+  pool: <%= ENV['DB_POOL'] || ENV['RAILS_MAX_THREADS'] || 5 %>
+<% end %>
+
+development:
+  <<: *default
 
 test:
-  adapter: mysql2
-  database: rademade_admin_test
-  encoding: utf8
-  collation: utf8_general_ci
-  username: root
-  password: root
-  pool: 5
-  timeout: 5000
+  <<: *default
 
 production:
-  adapter: mysql2
-  database: rademade_admin
-  encoding: utf8
-  collation: utf8_general_ci
-  username: root
-  password: root
-  pool: 5
-  timeout: 5000
+  <<: *default

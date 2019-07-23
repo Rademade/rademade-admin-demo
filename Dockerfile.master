@@ -1,0 +1,53 @@
+FROM ruby:2.3
+
+ENV RAILS_ENV production
+
+RUN apt-get update && \
+    (curl -sS https://deb.nodesource.com/setup_8.x | bash -) && \
+    apt-get install -qq -y --no-install-recommends \
+        imagemagick libmagickwand-dev jpegoptim optipng \
+        build-essential default-libmysqlclient-dev \
+        wait-for-it nodejs && \
+    echo "{ \"allow_root\": true }" >> /root/.bowerrc && \
+    gem install bundler && \
+    npm install -g bower
+
+WORKDIR /app
+COPY . .
+
+# There's a bug in globalize gem that makes loading a model trigger a database
+# connection: https://github.com/globalize/globalize/issues/723
+# Additionally, loading a sequel model makes it connect to the database
+# in any case.
+# Considering that eager loading is disabled, commenting out resources in
+# config/routes.rb makes it not load the model files and not
+# connect to the database.
+RUN bundle install --without development test --deployment \
+    && : disable admin_resources in config/routes.rb so that it\'d not connect to db \
+    && sed -Ei 's/^(\s*admin_resources)\b/# TEMPORARY \1/' config/routes.rb \
+    && bin/rake rademade_admin:bower:install \
+    && bin/rake bower:install \
+    && bin/rake assets:precompile \
+    && : enable admin_resources back \
+    && sed -Ei 's/^# TEMPORARY //' config/routes.rb
+
+
+FROM ruby:2.3
+
+ENV INSTALL_PATH  /app
+
+RUN apt-get update && \
+    (curl -sS https://deb.nodesource.com/setup_8.x | bash -) && \
+    apt-get install -qq -y --no-install-recommends \
+        imagemagick jpegoptim optipng \
+        wait-for-it nodejs && \
+    apt-get clean && rm -rf /var/lib/apt/lists/* && \
+    gem install bundler
+
+WORKDIR $INSTALL_PATH
+COPY . .
+COPY --from=0 $INSTALL_PATH/vendor/bundle vendor/bundle
+COPY --from=0 $INSTALL_PATH/public/assets public/assets
+RUN bundle install --without development test --deployment
+
+ENTRYPOINT ["bin/entrypoint.sh"]

@@ -81,4 +81,12 @@ Dummy::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
   
   config.active_record.raise_in_transactional_callbacks = true
+
+  if ENV["RAILS_LOG_TO_STDOUT"].present?
+    logger           = ActiveSupport::Logger.new(STDOUT)
+    logger.formatter = config.log_formatter
+    config.logger    = ActiveSupport::TaggedLogging.new(logger)
+  end
+
+  config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
 end

@@ -1,20 +1,16 @@
-development:
+default: &default
   adapter: mysql2
-  host: localhost
-  database: rademade_admin_dev
-  user: root
-  password: root
+  host: <%= ENV['MYSQL_HOST'] %>
+  port: <%= ENV['MYSQL_PORT'] %>
+  user: <%= ENV['MYSQL_USER'] %>
+  password: <%= ENV['MYSQL_PASSWORD'] || ENV['MYSQL_USER'] %>
+  database: <%= ENV['MYSQL_DATABASE'] %>
+
+development:
+  <<: *default
 
 test:
-  adapter: mysql2
-  host: localhost
-  database: rademade_admin_test
-  user: root
-  password: root
+  <<: *default
 
 production:
-  adapter: mysql2
-  host: localhost
-  database: rademade_admin
-  user: root
-  password: root
+  <<: *default

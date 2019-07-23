@@ -1,0 +1,6 @@
+#!/bin/sh
+bundle check || bundle install
+rm -rf tmp/pids
+wait-for-it -t 30 -h "$MYSQL_HOST" -p "$MYSQL_PORT"
+wait-for-it -t 30 -h "$MONGO_HOST" -p "$MONGO_PORT"
+bundle exec rails server --port "$APP_PORT" --binding 0.0.0.0
