@@ -7,7 +7,7 @@ ENV BUNDLE_PATH $INSTALL_PATH/vendor/bundle
 
 # make executables available without "bundle exec"
 ENV GEM_HOME $INSTALL_PATH/vendor/bundle
-ENV PATH $GEM_HOME/bin:$PATH
+ENV PATH $INSTALL_PATH/bin:$GEM_HOME/bin:$PATH
 
 RUN apt-get update && \
     (curl -sS https://deb.nodesource.com/setup_8.x | bash -) && \
