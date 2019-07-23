@@ -28,10 +28,6 @@ gem 'carrierwave'
 gem 'puma'
 
 group :development do
-	# gem 'capistrano', '3.4.0'
-	# gem 'capistrano-rails', '~> 1.1'
-	# gem 'capistrano-bundler'
-	# gem 'capistrano-rvm', '0.1.2'
 	gem 'pry'
 end
 
