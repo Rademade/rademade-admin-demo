@@ -95,7 +95,7 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
     configurations (2.2.2)
-    crass (1.0.4)
+    crass (1.0.5)
     diff-lcs (1.3)
     ejs (1.1.1)
     erubis (2.7.0)
@@ -121,7 +121,7 @@ GEM
       image_optimizer (~> 1.3.0)
       rack
       rmagick
-    loofah (2.2.3)
+    loofah (2.3.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -156,7 +156,7 @@ GEM
       mongoid
       mongoid_criteria_filter
     mysql2 (0.3.21)
-    nokogiri (1.10.3)
+    nokogiri (1.10.5)
       mini_portile2 (~> 2.4.0)
     origin (2.3.1)
     orm_adapter (0.5.0)
